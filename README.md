@@ -36,6 +36,13 @@ a letra q (quit) sai da exibição das branches.
 
 ~/p/f/3git-gifflow  on   develop ?1 ▓▒░ git flow feature start welcome
 
+verifica se há algo a ser entregue (commit)
 -> git status
 
+depois que for entregue, verifica o log dos arquivos
 -> git log
+
+Gerando um release, ou seja, tenho as entregas das features na develop e estou querendo passar para a produção.
+
+-> git flow release start 0.1.0
+
