@@ -46,3 +46,21 @@ Gerando um release, ou seja, tenho as entregas das features na develop e estou q
 
 -> git flow release start 0.1.0
 
+Nessa opção podemos trocar a versão da release
+
+E adicionar novos commits vindos da branch develop
+
+Ao adicionar uma nova feature, ao finalizar não temos a informação dessa feature na release por meio do git log, pois ela ainda pode estar sendo preparada e sofrendo novas atualizações.
+
+Aqui temos tanto no branch develop rodando a funcionalidade de contato que foi desenvolvida e no release não tem essa funcionalidade contato, sendo eles separados nesse ponto.
+Vamos por em produção!
+
+-> git flow release finish 0.1.0
+
+Nesse ponto o git flow está dando uma marge da release para o master e também para o develop, pois fora modificado um arquivo que estava na branch release (index.html) e também sendo adicionada a feature contact.html na branch develop.
+
+Mostra as tags geradas
+-> git tag
+
+Vamos imaginar que deu um problema em produção
+
