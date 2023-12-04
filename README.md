@@ -35,3 +35,7 @@ Após a configuração de início do git flow, somente as 2 branches são criada
 a letra q (quit) sai da exibição das branches.
 
 ~/p/f/3git-gifflow  on   develop ?1 ▓▒░ git flow feature start welcome
+
+-> git status
+
+-> git log
