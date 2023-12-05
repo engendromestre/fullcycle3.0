@@ -72,3 +72,74 @@ Como faz para assinar?
 Basicamente se trabalha com uma chave pública e uma chave privada e todas as vezes que for feito o commit você vai precisar para fazer a assinatura.
 Exite um projeto chamado OpenGP e a ideia dele é de inclusive fazer assinaturas e criptografias de e-mail, etc. Nele há uma ferramente chamada de GPG (Gnum Privace Gard) e baseada nessa ferramenta gigantesca, uma dessas coisas é gerar essas chaves para fazer o processo de assinatura.
 
+# Gerando chave gpg e assinando commits
+
+-> gpg --list-secret-key --keyid-form LONG
+
+Com esse comando você vai verificar se há alguma chave criada no SO. 
+
+Processo de criação das chaves
+
+-> gpg --full-generate-key
+
+Escolher o tipo de chave utilizada (RSA é a padrão)
+
+-> 1
+
+Escolher o tamanho da chave (em bits)
+
+-> 4096
+
+Por quanto tempo essa chave essa chave vai ser válida 
+
+-> 1y
+
+1 ano
+
+Confirmar a informação de tempo
+
+Qual é o nome que você vai usar para identificar essa chave? 
+Esse nome vai ser exatamente igual ao usado no git 
+git config --global.username (engendromestre)
+
+-> engendromestre
+-> engendro.mestre@gmail.com
+
+(dá para adicionar outros e-mails depois)
+
+Confirmar
+
+Agora ele vai pedir uma senha para conseguir acessar essa sua chave
+
+Os dados ficam armazenados na pasta home/gnupg
+
+-> gpg --list-secret-key --keyid-form LONG
+
+agora que eu seu o id da chave:
+
+-> gpg --armor --export 48CB69B3A66FEA37
+
+Copiar a chave pública gerada
+Acessar o github
+Ir para as configurações
+SSH e GPG Keys
+Adicionar uma GPG KEY
+
+Todas as vezes que eu for subir um commit, ele vai comparar essa chave pública com a assinatura do meu commit e se bater ele vai mostrar essa chave como verificada.
+
+Definir qual é a chave padrão para a assinatura
+- Pegar novamente o ID da chave
+-> git config --global.user.signingkey 48CB69B3A66FEA37
+
+Trabalhar com a variável de ambiente chamada GPG_TTY=$(tty)
+
+-> export GPG_TTY=$(tty)
+
+O que acontece aqui?
+Para não ter que ficar exportando o tempo todo
+Copiar o comando acima e e colocar no bash profile que é o arquivo utilizado na hora que carrega o terminal
+
+Assinar por padrão os nossos commits e tags
+
+-> git config --global.commit.gpgsign true
+-> git config --global tag.gpgSign true
