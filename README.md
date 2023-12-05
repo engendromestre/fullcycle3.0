@@ -143,3 +143,17 @@ Assinar por padrão os nossos commits e tags
 
 -> git config --global.commit.gpgsign true
 -> git config --global tag.gpgSign true
+
+Adicionei ou modifiquei um arquivo
+
+-> git add .
+-> git commit -m 'First Commit'
+
+Pediu a senha de assinatura
+Digitada a senha de assinatura o linux vai armazenar essa senha para que não seja pedido mais
+
+Obs. se quiser que a assinatura só seja feita no progeto atual
+
+-> git commit -S -m 'First Commit'
+
+Conferir se o commit está assinado
