@@ -64,3 +64,11 @@ Mostra as tags geradas
 
 Vamos imaginar que deu um problema em produção
 
+# Entendendo sobre assinaturas
+- Referente a parte de segurança. No momento que você vai configurar um repositório, você normalmente configura os parâmetros globais name e e-mail. Ali você coloca o nome e email que você quer. Vamos imaginar que dentro do seu projeto alguém muda as credenciais dele e coloca as suas credenciais e faz um commit e faz um pull request. Todos dentro do projeto estão pensando que é você que está contribuindo e não essa outra pessoa. Ou então  até mesmo se você estiver participando de um projeto open-source. Ou eventualmente você está usando o computador de outro desenvolvedor e esqueceu de configurar e você mandou os dados do seu commit como se fosse outra pessoa.
+A forma mais segura para se previnir contra esse tipo de situação é fazendo a assinatura digital do seu commit. Dessa forma você garante que os commits que você está fazendo são de sua autoridade, pois eles estão assinados.
+Então vamos configurar tanto o computador quanto a conta do github para garantir a segurança nos projetos.
+Como faz para assinar?
+Basicamente se trabalha com uma chave pública e uma chave privada e todas as vezes que for feito o commit você vai precisar para fazer a assinatura.
+Exite um projeto chamado OpenGP e a ideia dele é de inclusive fazer assinaturas e criptografias de e-mail, etc. Nele há uma ferramente chamada de GPG (Gnum Privace Gard) e baseada nessa ferramenta gigantesca, uma dessas coisas é gerar essas chaves para fazer o processo de assinatura.
+
