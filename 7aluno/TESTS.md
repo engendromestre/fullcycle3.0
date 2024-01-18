@@ -43,4 +43,7 @@ npx jest --init
 npm test
  ```
  - cada entidade pode ter seu arquivo de testes. A convenção de nomes do Jest é entidade.spec.ts
+
+ # Criando a classe Product
+ - Desenvolvimento guiado a teste. Para criar um teste, inivitavelmente eu preciso pensar em como o Produto deve ser. 
  

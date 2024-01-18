@@ -159,3 +159,5 @@ npx tslint --init
     - Um agregado de cliente, que nada mais é que um conjunto que satifaz esse bloco, onde o objeto de valor Address e a entidade Cliente fazem parte desse agregado
     - Um agregado de ordem. Esse agregado possui uma entidade Order e uma entidade Item e essas entidade Order possui um relacionamento com o Customer, porém um relacionamento por ID.
 - Aqui temos uma cabeça de entrada (root) para os agregados. E essa cabeça é por onde o agregado começa. Depois que você descobre por onde esse agregado começa, o nome do agregado é examente o nome da Entidade. Aqui o Root Aggregate é Order e Customer.
+- Vamos adicionar um agregado de Produto. Esse agregado vai nos ajudar a fazer a relação entre Order e Item. Todo Item de Order vai receber um novo produto.
+- Aqui o Produto não faz parte do mesmo agregado de Order.
