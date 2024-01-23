@@ -33,7 +33,7 @@ export default class Customer {
 
   changeName(name: string) {
     this._name = name;
-    this.validate;
+    this.validate();
   }
 
   get name(): string {
@@ -55,7 +55,7 @@ export default class Customer {
     return this._active;
   }
 
-  setAddress(address: Address) {
+  changeAddress(address: Address) {
     this._address = address;
   }
 

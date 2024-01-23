@@ -1,7 +1,7 @@
 # Entendendo Domain Services
 
 - A service in the domain is a stateless operation that fulfills a domain-specific task. Oftn the best indication thtat you should create a Service in the domain model is when the operation you need to perform feels out of palce as a method on an Aggregate(10) or a Value Object(6). (Vernon, Vaughn. Implementing Domain-Driven Design)
- - Um serviço de domínio é uma operação sem estado que cumpre uma tarea específica do domínio. Muitas vezes, a melhor indicação de que você deve criar um serviço no modelo de domínio é quando a operação que você precisa executar parece não se encaixar como um método em um agregado(10) ou um objeto de valor(6).
+ - Um serviço de domínio é uma operação sem estado que cumpre uma tarefa específica do domínio. Muitas vezes, a melhor indicação de que você deve criar um serviço no modelo de domínio é quando a operação que você precisa executar parece não se encaixar como um método em um agregado(10) ou um objeto de valor(6).
  - Muitas vezes é necessário realizar uma operação no nosso modelo de domínio. Porém as vezes que colocar um método na sua Entidade em um agregado ou em um Objeto de Valor, o método que precisa ser implementado não faz sentido estar naquele contexto, ou até mesmo faça sentido mas ele precise de um outro agregado para realizar uma operação. Esse é um indicativo que é preciso de um Serviço de Domínio.
 
  ## Domain Services

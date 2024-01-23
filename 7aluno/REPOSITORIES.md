@@ -57,3 +57,6 @@ npm install sqlite3
 - Criar arquivo na raiz: .swcrc
 - a chamada está ocorrendo de forma 100% estática. Será que é uma má prática, será que não era melhor passar uma injeção de dependência? 
 - Não estamos pensando em nada disso pois esse repositório de produto é específico para o sequelize. Então ele já tem um acomplamento muito forte. O importante é que essa classe implemente essa interface.
+
+# Implementando CustomerRepostitory
+ - Primeiro é necessário modelar o domínio para depois pensar na modelagem de banco de dados. Dessa forma posso copiar a pasta de domínio para qualquer outro projeto que vai funcionar, pois ela é completamente agnóstica a banco de dados.
