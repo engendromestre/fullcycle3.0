@@ -1,0 +1,11 @@
+- em src/domain: criar a pasta events
+- aqui na pasta events alguns pontos importantes:
+  - os eventos baseados nos agregados
+  - a implementação e todo esse processo descrito na introdução
+  - essa implementação é compartilhada para todos os eventos
+    - dentro de events: criar a pasta @shared
+    - o @ deixa o diretório como primeiro
+    - dentro de @shared:
+      - event.interface.ts
+      - event-handler.interface.ts
+      - event-dispatcher.interface.ts
